@@ -8,7 +8,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> -->
         <style>
             body {
                 background-color: black;
@@ -21,130 +20,90 @@
         </style>
     </head>
     <body>
-        <div id="rotor1" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-            <li data-target="#rotor1" data-slide-to="0" class="active"></li>
-            <li data-target="#rotor1" data-slide-to="1"></li>
-            <li data-target="#rotor1" data-slide-to="2"></li>
-        </ul>
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
-        </div>
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#rotor1" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#rotor1" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
-        
-
-        <div id="rotor2" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-            <li data-target="#rotor2" data-slide-to="0" class="active"></li>
-            <li data-target="#rotor2" data-slide-to="1"></li>
-            <li data-target="#rotor2" data-slide-to="2"></li>
-        </ul>
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
-        </div>
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#rotor2" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#rotor2" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
-
-
-        <div id="rotor3" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-            <li data-target="#rotor3" data-slide-to="0" class="active"></li>
-            <li data-target="#rotor3" data-slide-to="1"></li>
-            <li data-target="#rotor3" data-slide-to="2"></li>
-        </ul>
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
-        </div>
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#rotor3" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#rotor3" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
-
-
-        <div id="rotor4" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-            <li data-target="#rotor4" data-slide-to="0" class="active"></li>
-            <li data-target="#rotor4" data-slide-to="1"></li>
-            <li data-target="#rotor4" data-slide-to="2"></li>
-        </ul>
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
-        </div>
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#rotor4" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#rotor4" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
         <script>
             var rotor1 = ['D <', 'G : ^', 'A ?', 'Q : 7', 'V . 3', 'X : &', 'Z : *', 'E : %', 'U $', 'Y @', 'K 0', 'B . )', 'C . 1', 'L . 8', 'S : #', 'N : 4', 'T 6', 'I . =', 'W . 9', 'P 5', 'R . >', 'O : 2', 'F . /', 'H : (', 'M !', 'J +']
             var rotor2 = ['P . 9', 'E . 0', 'I /', 'M . 2', 'L . +', 'X &', 'T 3', 'D . ^', 'J . =', 'W : #', 'N . *', 'Q : )', 'Z >', 'A : 4', 'R : 6', 'K $', 'B : ?', 'V %', 'F : 7', 'G @', 'U . 5', 'S : 8', 'O !', 'Y . <', 'H : (', 'C 1']
             var rotor3 = ['P : ?', 'J (', 'D : @', 'E : !', 'O . 0', 'L . $', 'V >', 'G . 4', 'F : *', 'S 7', 'W : /', 'M : 5', 'A 2', 'N . &', 'Y . )', 'Q 6', 'X : +', 'U <', 'B . %', 'I . 9', 'Z . =', 'K : ^', 'R . 1', 'C #', 'H 3', 'T : 8']
             var rotor4 = ['F . 9', 'W : *', 'V : ?', 'B 3', 'G . 8', 'U : 4', 'M . $', 'H . 0', 'C : <', 'L : 1', 'R 5', 'J ^', 'D : !', 'I #', 'Y . 7', 'Q . 2', 'X . +', 'Z @', 'N : =', 'A /', 'P . >', 'E : &', 'O %', 'K )', 'T : (', 'S 6']
 
-            Array.prototype.slide = function (direction) {
-                if (direction === 'left') {                
-                    // Slides left once
-                    for (let i = 0; i < this.length; i++) {
-                        this[0].push(this[0].unshift())
-                    }
-                } else if (direction === 'right') {
-                    // Slides right once
-                    for (let i = 0; i < this.length; i++) {
-                        this[0].shift(this[0].pop())
-                    }
+            for (let i = 0; i < 4; i++) {
+                var rotorLoop = 'rotor' + i
+
+                // <div id="rotor#" class="carousel slide" data-ride="carousel">
+                var rotor = document.createElement('DIV')
+                rotor.id = rotorLoop
+                rotor.className = 'carousel slide'
+                rotor.data-ride = 'carousel'
+                document.body.appendChild(rotor)
+
+                // <ul class="carousel-indicators">
+                var list = document.createElement('UL')
+                list.className = 'carousel-indicators'
+                document.body.rotor.appendChild(list)
+                
+                // <li data-target="#rotor" data-slide-to="0" class="active"></li>
+                var firstListItem = document.createElement('LI')
+                firstListItem.data-target = '#' + rotorLoop
+                firstListItem.data-slide-to = '0'
+                firstListItem.className = 'active'
+                document.body.list.appendChild(firstListItem)
+                for (let i = 1; i < rotor1.length; i++) {
+                    var listItem = document.createElement('LI')
+                    listItem.data-target = '#' + rotorLoop
+                    listItem.data-slide-to = i.toString()
+                    document.body.list.appendChild(listItem)
                 }
-                return;
-            }
+                
+                // <div class="carousel-inner">
+                var carousel = document.createElement('DIV')
+                carousel.className = 'carousel-inner'
+                document.body.rotor.appendChild(carousel)
+
+                // <div class="carousel-item active">
+                firstCarouselItem = document.createElement('DIV')
+                firstCarouselItem.className = 'carousel-item active'
+                firstCarouselItem.innerText = rotorLoop[0]
+                document.body.carousel.appendChild(firstCarouselItem)
+                for (let i = 1; i < rotor1.length; i++) {
+                    carouselItem = document.createElement('DIV')
+                    carouselItem.className = 'carousel-item'
+                    carouselItem.innerText = rotorLoop[0]
+                    document.body.carousel.appendChild(carouselItem)
+                }
+                
+                /*
+                 * <a class="carousel-control-prev" href="#rotor" data-slide="prev">
+                 *      <span class="carousel-control-prev-icon"></span>
+                 * </a>
+                 */                
+                var prev = document.createElement('A')
+                prev.className = 'carousel-control-prev'
+                prev.href = '#' + rotorLoop
+                prev.data-slide = 'prev'
+                document.body.rotor.appendChild(prev)
+                var prevSpan = document.createElement('SPAN')
+                prevSpan.className = 'carousel-control-prev-icon'
+                document.body.prev.appendChild(prevSpan)      
+
+                /*
+                 * <a class="carousel-control-next" href="#rotor" data-slide="next">
+                 *      <span class="carousel-control-next-icon"></span>
+                 * </a>
+                 */
+                var next = document.createElement('A')
+                next.className = 'carousel-control-prev'
+                next.href = '#' + rotorLoop
+                next.data-slide = 'next'
+                document.body.rotor.appendChild(next)
+                var nextSpan = document.createElement('SPAN')
+                nextSpan.className = 'carousel-control-next-icon'
+                document.body.next.appendChild(nextSpan)
+
+            } 
+
             /*
              * To-Do: Make rotors moveable, custom rotors using local storage, add store/credit link
+             * https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_carousel_js&stacked=h
              */
         </script>
     </body>
