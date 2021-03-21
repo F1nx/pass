@@ -1,115 +1,77 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <style>
-            body {
-                background-color: black;
-                color: white;
-                text-align: center;
-            }
-            a, h1 {
-                font-size: 400%;
-                text-decoration: bold;
-            }
-            .pointer {
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-        <br />
-        <br />
-        <br />
-        <div class='row'>
-            <div class='col'>
-                <a class='pointer' onclick="rotor0.slide('left')"><</a>
-            </div>
-            <div class='col'>                
-                <h1 id='rotor0'></h1>
-            </div>
-            <div class='col'>
-                <a class='pointer' onclick="rotor0.slide('right')">></a>
-            </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <div class='row'>
-            <div class='col'>
-                <a class='pointer' onclick="rotor1.slide('left')"><</a>
-            </div>
-            <div class='col'>                
-                <h1 id='rotor1'></h1>
-            </div>
-            <div class='col'>
-                <a class='pointer' onclick="rotor1.slide('right')">></a>
-            </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <div class='row'>
-            <div class='col'>
-                <a class='pointer' onclick="rotor2.slide('left')"><</a>
-            </div>
-            <div class='col'>
-                <h1 id='rotor2'></h1>
-            </div>
-            <div class='col'>
-                <a class='pointer' onclick="rotor2.slide('right')">></a>
-            </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <div class='row'>
-            <div class='col'>
-                <a class='pointer' onclick="rotor3.slide('left')"><</a>
-            </div>
-            <div class='col'>
-                <h1 id='rotor3'></h1>
-            </div>
-            <div class='col'>
-                <a class='pointer' onclick="rotor3.slide('right')">></a>
-            </div>
-        </div>
-        <script>
-            var rotor0 = ['D <', 'G : ^', 'A ?', 'Q : 7', 'V . 3', 'X : &', 'Z : *', 'E : %', 'U $', 'Y @', 'K 0', 'B . )', 'C . 1', 'L . 8', 'S : #', 'N : 4', 'T 6', 'I . =', 'W . 9', 'P 5', 'R . >', 'O : 2', 'F . /', 'H : (', 'M !', 'J +']
-            var rotor1 = ['P . 9', 'E . 0', 'I /', 'M . 2', 'L . +', 'X &', 'T 3', 'D . ^', 'J . =', 'W : #', 'N . *', 'Q : )', 'Z >', 'A : 4', 'R : 6', 'K $', 'B : ?', 'V %', 'F : 7', 'G @', 'U . 5', 'S : 8', 'O !', 'Y . <', 'H : (', 'C 1']
-            var rotor2 = ['P : ?', 'J (', 'D : @', 'E : !', 'O . 0', 'L . $', 'V >', 'G . 4', 'F : *', 'S 7', 'W : /', 'M : 5', 'A 2', 'N . &', 'Y . )', 'Q 6', 'X : +', 'U <', 'B . %', 'I . 9', 'Z . =', 'K : ^', 'R . 1', 'C #', 'H 3', 'T : 8']
-            var rotor3 = ['F . 9', 'W : *', 'V : ?', 'B 3', 'G . 8', 'U : 4', 'M . $', 'H . 0', 'C : <', 'L : 1', 'R 5', 'J ^', 'D : !', 'I #', 'Y . 7', 'Q . 2', 'X . +', 'Z @', 'N : =', 'A /', 'P . >', 'E : &', 'O %', 'K )', 'T : (', 'S 6']
-            
-            Array.prototype.slide = function (direction) {
-                console.log(this)
-                if (direction === 'left') {                
-                    // Slides left once
-                    for (let i = 0; i < this.length; i++) {
-                        this[0].push(this[0].unshift())
-                    }
-                } else if (direction === 'right') {
-                    // Slides right once
-                    for (let i = 0; i < this.length; i++) {
-                        this[0].shift(this[0].pop())
-                    }
-                }
-            }
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>p@ss™</title>
+    <!-- To-Do: Make rotors moveable, custom rotors using local storage, add store/credit line -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <style>
+     body {
+       background-color: black;
+       color: white;
+     }
+     .slick-track {
+       padding: 3%;
+       border-top: 2px white solid;
+       border-bottom: 2px white solid;
+     }
+     a, h1 {
+      font-size: 400%;
+      text-decoration: bold;
+     }
+     .pointer {
+       cursor: pointer;
+     }
+    </style>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      var rotors = [
+        ["D <", "G : ^", "A ?", "Q : 7", "V . 3", "X : &", "Z : *", "E : %", "U $", "Y @", "K 0", "B . )", "C . 1", "L . 8", "S : #", "N : 4", "T 6", "I . =", "W . 9", "P 5", "R . >", "O : 2", "F . /", "H : (", "M !", "J +"],
+        ["P . 9", "E . 0", "I /", "M . 2", "L . +", "X &", "T 3", "D . ^", "J . =", "W : #", "N . *", "Q : )", "Z >", "A : 4", "R : 6", "K $", "B : ?", "V %", "F : 7", "G @", "U . 5", "S : 8", "O !", "Y . <", "H : (", "C 1"],
+        ["P : ?", "J (", "D : @", "E : !", "O . 0", "L . $", "V >", "G . 4", "F : *", "S 7", "W : /", "M : 5", "A 2", "N . &", "Y . )", "Q 6", "X : +", "U <", "B . %", "I . 9", "Z . =", "K : ^", "R . 1", "C #", "H 3", "T : 8"],
+        ["F . 9", "W : *", "V : ?", "B 3", "G . 8", "U : 4", "M . $", "H . 0", "C : <", "L : 1", "R 5", "J ^", "D : !", "I #", "Y . 7", "Q . 2", "X . +", "Z @", "N : =", "A /", "P . >", "E : &", "O %", "K )", "T : (", "S 6"]
+      ];
 
-            document.getElementById('rotor0').innerText = rotor0[0]
-            document.getElementById('rotor1').innerText = rotor1[0]
-            document.getElementById('rotor2').innerText = rotor2[0]
-            document.getElementById('rotor3').innerText = rotor3[0]
+      for (i in rotors) {
 
-            /*
-             * To-Do: Make rotors moveable, custom rotors using local storage, add store/credit link
-             * https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_carousel_js&stacked=h
-             */
-        </script>
-    </body>
+        var rotor = rotors[i];
+        console.log(rotor);
+        var carousel = document.createElement("DIV");
+
+        for (dial of rotor) {
+
+          var txtNode = document.createTextNode(dial);
+          var ring = document.createElement("DIV");
+          ring.appendChild(txtNode);
+          $(carousel).append(ring);
+
+        }
+
+        $(carousel).slick({
+          centerMode: true,
+          centerPadding: "60px",
+          slidesToShow: 5,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: "40px",
+                slidesToShow: 5
+              }
+            },
+          ]
+        });
+
+        document.body.appendChild(carousel);
+
+      }
+    </script>
+  </body>
 </html>
