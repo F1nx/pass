@@ -1,7 +1,7 @@
-# pass
-p@ss™ - JavaScript Edition: Forget Your Passwords.
+# p@ss™
+Forget Your Passwords.
 
-Based on the key fob developed by Russtopia Labs, this tool is able to help you generate custom & secure passwords while making it easy to memorize and keep your codes.
+Based on the key fob developed by Russtopia Labs, this tool is able to help you generate secure passwords while making it easy to memorize and keep your codes.
 
 Usage
 -

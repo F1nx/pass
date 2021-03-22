@@ -2,33 +2,63 @@
 <html>
   <head>
     <title>p@ss™</title>
-    <!-- To-Do: Make rotors moveable, custom rotors using local storage, add store/credit line -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <style>
-     body {
-       background-color: black;
-       color: white;
-     }
-     .slick-track {
-       padding: 3%;
-       border-top: 2px white solid;
-       border-bottom: 2px white solid;
-     }
-     a, h1 {
-      font-size: 400%;
-      text-decoration: bold;
-     }
-     .pointer {
-       cursor: pointer;
-     }
-    </style>
-  </head>
-  <body>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+        /*background-image: url("");
+        /**/
+        background-position: center;
+        background-size: cover;
+      }
+      #readme {
+        text-align: center;
+        padding: 4%;
+      }
+      #cage {
+        background-image: linear-gradient(to right, #1a1a1a, black, #1a1a1a); /* or #0d0d0d */
+      }
+      .slick-track {
+        padding: 2%;
+        margin-left: 7%;
+        border-top: 2px white solid;
+        border-bottom: 2px white solid;
+        cursor: pointer;
+        font-size: 150%;
+      }
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+      h5 {
+         text-align: center;
+         padding-top: 4%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="readme">
+      <h3>
+        p@ss™
+      </h3>
+      <h4>
+        Forget Your Passwords.
+      </h4>
+    </div>
+    <div id="cage"></div>
     <script>
       var rotors = [
         ["D <", "G : ^", "A ?", "Q : 7", "V . 3", "X : &", "Z : *", "E : %", "U $", "Y @", "K 0", "B . )", "C . 1", "L . 8", "S : #", "N : 4", "T 6", "I . =", "W . 9", "P 5", "R . >", "O : 2", "F . /", "H : (", "M !", "J +"],
@@ -45,33 +75,26 @@
 
         for (dial of rotor) {
 
-          var txtNode = document.createTextNode(dial);
-          var ring = document.createElement("DIV");
+
+          var txtNode = document.createTextNode(dial.replace(/ /g, ""));
+          var ring = document.createElement("SPAN");
           ring.appendChild(txtNode);
           $(carousel).append(ring);
 
         }
 
         $(carousel).slick({
-          centerMode: true,
-          centerPadding: "60px",
           slidesToShow: 5,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: "40px",
-                slidesToShow: 5
-              }
-            },
-          ]
+          edgeFriction: 0,
+          arrows: false,
         });
 
-        document.body.appendChild(carousel);
+        document.getElementById("cage").appendChild(carousel);
 
       }
     </script>
+    <h5>
+      <a href="https://www.tindie.com/products/russtopia/psstm-mark-ii-password-generatorrecall-key-fob/?pt=ac_prod_search">Russtopia Labs</a>
+    </h5>
   </body>
 </html>
