@@ -2,6 +2,7 @@ module main
 module ui
 
 import gg
+import glm
 import gx
 import os
 import ui
@@ -31,19 +32,51 @@ fn main () {
 
 			}),
 			ui.row({
-
+				ui.button( // Left
+					text: '<'
+					onclick: rotate(left)
+				)
+				ui.button( // Right
+					text: '>'
+					onclick: rotate(right)
+				)
 			}),
 			ui.row({
-
+				ui.button( // Left
+					text: '<'
+					onclick: rotate(left)
+				)
+				ui.button( // Right
+					text: '>'
+					onclick: rotate(right)
+				)
 			}),
 			ui.row({
-
+				ui.button( // Left
+					text: '<'
+					onclick: rotate(left)
+				)
+				ui.button( // Right
+					text: '>'
+					onclick: rotate(right)
+				)
 			}),
 			ui.row({
-
+				ui.button( // Left
+					text: '<'
+					onclick: rotate(left)
+				)
+				ui.button( // Right
+					text: '>'
+					onclick: rotate(right)
+				)
 			}),
 			ui.row({
 
 			})
 	])
+}
+
+fn rotate (direction) {
+	
 }
